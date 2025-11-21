@@ -8,7 +8,7 @@ RUN gradle build --no-daemon
 
 
 #STAGE 2 
-FROM openjdk:21-jdk
+FROM eclipse-temurin:21-jdk
 WORKDIR /app 
 COPY --from=builder /app/build/libs/*.jar discografia.jar 
 EXPOSE 443 
